@@ -34,6 +34,7 @@ namespace Srikanth
 				Console.WriteLine("4. View Employee");
 				Console.WriteLine("5. View All");
 				Console.WriteLine("6. Sort Employees");
+				Console.WriteLine("7. Exit");
 				Console.Write("Enter your choice: ");
 				string userInput;
 				int Choice = 0;
@@ -42,12 +43,12 @@ namespace Srikanth
 				{
 					userInput = Console.ReadLine();
 					isValidResponse = int.TryParse(userInput, out Choice);
-					if (!isValidResponse || Choice < 1 || Choice > 6)
+					if (!isValidResponse || Choice < 1 || Choice > 7)
 					{
-						Console.WriteLine("Please enter a valid number between 1 to 6");
+						Console.WriteLine("Please enter a valid number between 1 to 7");
 						Console.Write("Enter your choice: ");
 					}
-				} while (!isValidResponse || Choice < 1 || Choice > 6);
+				} while (!isValidResponse || Choice < 1 || Choice > 7);
 				switch (Choice)
 				{
 					case 1:
@@ -419,6 +420,9 @@ namespace Srikanth
 							}
 							Console.WriteLine("Descending Sort Successful");
 						}
+						break;
+					case 7:
+						Environment.Exit(0);
 						break;
 					default:
 						break;
