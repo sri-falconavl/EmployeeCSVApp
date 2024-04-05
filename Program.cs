@@ -429,7 +429,7 @@ namespace Srikanth
 				}
 				do
 				{
-					Console.Write("Do you wish to continue - YES or NO: ");
+					Console.Write("Do you wish to continue - YES (y) or NO (n): ");
 					userResponse = Console.ReadLine().ToUpper();
 				} while (userResponse != "YES" && userResponse != "NO" && userResponse != "Y" && userResponse != "N");
 			} while (userResponse == "YES" || userResponse == "Y");
